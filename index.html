@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Carrito Ubidots</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Carrito Ubidots</h1>
+        
+        <div class="instructions">
+            <p>Ingresa la secuencia de comandos para el carrito:</p>
+            <p><strong>Formato:</strong> Letra seguida de número (ej: "F5,S2,L2,S2,F3")</p>
+            <p><strong>Comandos:</strong></p>
+            <ul>
+                <li>F: Adelante (Forward)</li>
+                <li>B: Atrás (Backwards)</li>
+                <li>L: Izquierda (Left)</li>
+                <li>R: Derecha (Right)</li>
+                <li>S: Detener (Stop)</li>
+                <li>H: Apuntar a dirección (Heading)</li>
+            </ul>
+            <p>Ejemplo: "F5,S1,L2,B3,H90" = Adelante 5s, Detener 1s, Izquierda 2s, Atrás 3s, Apuntar a 90°</p>
+        </div>
+        
+        <input type="text" id="valueInput" placeholder="Ejemplo: F5,S1,L2,B3,H90">
+        
+        <button id="updateButton">Enviar Comandos</button>
+        
+        <div id="statusMessage" class="status"></div>
+        <div id="commandLog"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
